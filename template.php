@@ -41,7 +41,7 @@
 				<td> <?php echo $aluno['mae']; ?> </td>
 				<td> <?php echo $aluno['endereco']; ?> </td>
 			</tr>
-		<?php endforeach; ?>
+		<?php endforeach; //testado e funcionado?>
 	</table>
 </body>
 </html>

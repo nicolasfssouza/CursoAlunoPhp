@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//testado e funcionando
 if (isset($_GET['nome']) && $_GET['nome'] != '') {
 	$aluno = array();
 
@@ -31,3 +31,5 @@ if (isset($_SESSION['listaAlunos'])) {
 }
 include "template.php";
 ?>
+
+
