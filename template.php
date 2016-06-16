@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Gerenciador de Alunos</title>
-	<link rel="stylesheet" href="tarefas.css" type="text/css"/>
+	<link rel="stylesheet" href="alunos.css" type="text/css"/>
 </head>
 <body>
 	<h1>Gerenciador de Alunos</h1>
@@ -10,6 +10,7 @@
 		<fieldset>
 			<legend>Novo Aluno</legend>
 			<label>
+
 				Aluno:
 				<input type="text" name="nome"/><br><br>
 				Email:
@@ -31,9 +32,9 @@
 		<tr>
 			<th>Lista de Alunos</th>
 		</tr>
-		<?php foreach ($lista_tarefas as $tarefa) : ?>
+		<?php foreach ($lista_alunos as $aluno) : ?>
 			<tr>
-				<td> <?php echo $tarefa; ?> </td>
+				<td> <?php echo $aluno; ?> </td>
 			</tr>
 		<?php endforeach; ?>
 	</table>

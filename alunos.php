@@ -2,13 +2,13 @@
 session_start();
 
 if (isset($_GET['nome'])) {
-	$_SESSION['lista_tarefas'][] = $_GET['nome'];
+	$_SESSION['lista_alunos'][] = $_GET['nome'];
 }
 
-if (isset($_SESSION['lista_tarefas'])) {
-	$lista_tarefas = $_SESSION['lista_tarefas'];
+if (isset($_SESSION['lista_alunos'])) {
+	$lista_alunos = $_SESSION['lista_alunos'];
 } else {
-	$lista_tarefas = array();
+	$lista_alunos = array();
 }
 include "template.php";
 ?>
