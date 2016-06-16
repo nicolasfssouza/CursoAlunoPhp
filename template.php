@@ -10,7 +10,6 @@
 		<fieldset>
 			<legend>Novo Aluno</legend>
 			<label>
-
 				Aluno:
 				<input type="text" name="nome"/><br><br>
 				Email:
@@ -30,11 +29,17 @@
 	</form>
 		<table>
 		<tr>
-			<th>Lista de Alunos</th>
+			<th>Aluno</th>
+			<th>E-Mail</th>
+			<th>Mãe</th>
+			<th>Endereço</th>
 		</tr>
-		<?php foreach ($lista_alunos as $aluno) : ?>
+		<?php foreach ($listaAlunos as $aluno) : ?>
 			<tr>
-				<td> <?php echo $aluno; ?> </td>
+				<td> <?php echo $aluno['nome']; ?> </td>
+				<td> <?php echo $aluno['email']; ?> </td>
+				<td> <?php echo $aluno['mae']; ?> </td>
+				<td> <?php echo $aluno['endereco']; ?> </td>
 			</tr>
 		<?php endforeach; ?>
 	</table>

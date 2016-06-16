@@ -1,14 +1,33 @@
 <?php
 session_start();
 
-if (isset($_GET['nome'])) {
-	$_SESSION['lista_alunos'][] = $_GET['nome'];
+if (isset($_GET['nome']) && $_GET['nome'] != '') {
+	$aluno = array();
+
+	$aluno['nome'] = $_GET['nome'];
+
+	if (isset($_GET['email'])){
+		$aluno['email'] = $_GET['email'];
+	}else {
+		$aluno['email'] = '';
+	}
+	if (isset($_GET['mae'])){
+		$aluno['mae'] = $_GET['mae'];
+	}else {
+		$aluno['mae'] = '';
+	}
+	if (isset($_GET['endereco'])){
+		$aluno['endereco'] = $_GET['endereco'];
+	}else {
+		$aluno['endereco'] = '';
+	}
+	$_SESSION['listaAlunos'] [] = $aluno;
 }
 
-if (isset($_SESSION['lista_alunos'])) {
-	$lista_alunos = $_SESSION['lista_alunos'];
+if (isset($_SESSION['listaAlunos'])) {
+	$listaAlunos = $_SESSION['listaAlunos'];
 } else {
-	$lista_alunos = array();
+	$listaAlunos = array();
 }
 include "template.php";
 ?>
